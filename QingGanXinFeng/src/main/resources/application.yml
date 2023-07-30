@@ -1,0 +1,27 @@
+server:
+  port: 8088
+  servlet:
+    session:
+      cookie:
+        same-site: "none"
+      timeout: 1800s
+    tomcat:
+      uri-encoding: UTF-8
+      basedir: "C:/location/"
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+      location: "C:/location/"
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/longqq?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123456
+#Debug: true
